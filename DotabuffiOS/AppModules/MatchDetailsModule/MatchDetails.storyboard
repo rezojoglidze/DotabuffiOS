@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeueLTGEO-55Roman.otf">
+            <string>HelveticaNeueLTGEO-55Roman</string>
+        </array>
+        <array key="HelveticaNeueLTGEO-65Medium.otf">
+            <string>HelveticaNeueLTGEO-65Medium</string>
+        </array>
+        <array key="HelveticaNeueLTGEO-75Bold.otf">
+            <string>HelveticaNeueLTGEO-75Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Match Details View-->
+        <scene sceneID="htw-l1-ahc">
+            <objects>
+                <viewController storyboardIdentifier="MatchDetailsView" id="xqD-av-Raz" customClass="MatchDetailsView" customModule="DotabuffiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EcR-ye-kTk"/>
+                        <viewControllerLayoutGuide type="bottom" id="vb6-4r-Epx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kgt-o0-aP8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aQf-eX-ifL">
+                                <rect key="frame" x="139" y="303" width="136.5" height="27"/>
+                                <subviews>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cn4-fQ-KCq">
+                                        <rect key="frame" x="0.0" y="-18.5" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="G81-z8-Y1e"/>
+                                            <constraint firstAttribute="height" constant="64" id="gAn-Ye-F27"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Victory Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aa-IX-yZ2">
+                                        <rect key="frame" x="0.0" y="0.0" width="136.5" height="27"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-65Medium" family="Helvetica Neue LT GEO" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zsu-fi-lXb">
+                                <rect key="frame" x="116.5" y="380" width="74" height="37"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="20"/>
+                                <state key="normal" title="Radiant">
+                                    <color key="titleColor" red="0.058823529409999999" green="0.050980392159999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9z-1V-wVb">
+                                <rect key="frame" x="240.5" y="380" width="40" height="37"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="20"/>
+                                <state key="normal" title="Dire">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="mZj-3s-MNR">
+                                <rect key="frame" x="134" y="427" width="146" height="42.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fT-h7-Dmd">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="42.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="35"/>
+                                        <color key="textColor" red="0.5725490196078431" green="0.6470588235294118" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLk-3F-hMI">
+                                        <rect key="frame" x="54" y="0.0" width="38" height="42.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="15"/>
+                                        <color key="textColor" red="0.058823529409999999" green="0.050980392159999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3O-1o-aRm">
+                                        <rect key="frame" x="107" y="0.0" width="39" height="42.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="35"/>
+                                        <color key="textColor" red="0.76078431372549016" green="0.23529411764705882" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ZpZ-qs-N74">
+                                <rect key="frame" x="20" y="519.5" width="147.5" height="47"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="v5E-qS-HtL">
+                                        <rect key="frame" x="0.0" y="0.0" width="147.5" height="18.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="მატჩის მოუდი :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCB-9s-WH4">
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-55Roman" family="Helvetica Neue LT GEO" pointSize="15"/>
+                                                <color key="textColor" red="0.5568627451" green="0.55294117649999996" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jx-qt-yDm">
+                                                <rect key="frame" x="131" y="0.0" width="16.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-55Roman" family="Helvetica Neue LT GEO" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2WS-Yw-y2i">
+                                        <rect key="frame" x="0.0" y="28.5" width="147.5" height="18.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="პირველი გოლი:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vq6-9e-VtQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-55Roman" family="Helvetica Neue LT GEO" pointSize="15"/>
+                                                <color key="textColor" red="0.5568627451" green="0.55294117649999996" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3m-fd-Pbw">
+                                                <rect key="frame" x="131" y="0.0" width="16.5" height="18.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-55Roman" family="Helvetica Neue LT GEO" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mZj-3s-MNR" firstAttribute="top" secondItem="Zsu-fi-lXb" secondAttribute="bottom" constant="10" id="0sq-cf-Fjt"/>
+                            <constraint firstItem="Zsu-fi-lXb" firstAttribute="top" secondItem="aQf-eX-ifL" secondAttribute="bottom" constant="50" id="3Vc-af-bOc"/>
+                            <constraint firstItem="mZj-3s-MNR" firstAttribute="centerX" secondItem="kgt-o0-aP8" secondAttribute="centerX" id="3bW-Pg-hLW"/>
+                            <constraint firstItem="L9z-1V-wVb" firstAttribute="centerX" secondItem="a3O-1o-aRm" secondAttribute="centerX" id="90k-6M-CDE"/>
+                            <constraint firstItem="ZpZ-qs-N74" firstAttribute="leading" secondItem="kgt-o0-aP8" secondAttribute="leading" constant="20" id="Fg9-Oi-sOX"/>
+                            <constraint firstItem="mZj-3s-MNR" firstAttribute="top" secondItem="L9z-1V-wVb" secondAttribute="bottom" constant="10" id="MSk-6y-JkQ"/>
+                            <constraint firstItem="aQf-eX-ifL" firstAttribute="centerX" secondItem="kgt-o0-aP8" secondAttribute="centerX" id="THz-GB-umS"/>
+                            <constraint firstItem="mZj-3s-MNR" firstAttribute="centerY" secondItem="kgt-o0-aP8" secondAttribute="centerY" id="Tef-j2-WdP"/>
+                            <constraint firstItem="L9z-1V-wVb" firstAttribute="centerY" secondItem="Zsu-fi-lXb" secondAttribute="centerY" id="fte-HI-i0s"/>
+                            <constraint firstItem="Zsu-fi-lXb" firstAttribute="centerX" secondItem="6fT-h7-Dmd" secondAttribute="centerX" id="nE1-wE-pWu"/>
+                            <constraint firstItem="ZpZ-qs-N74" firstAttribute="top" secondItem="mZj-3s-MNR" secondAttribute="bottom" constant="50" id="tIy-eB-Vgh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="direBtn" destination="L9z-1V-wVb" id="Coi-tR-qVj"/>
+                        <outlet property="direScoreLbl" destination="a3O-1o-aRm" id="gll-AB-0J9"/>
+                        <outlet property="firstBloodTimeLbl" destination="z3m-fd-Pbw" id="Irk-DJ-Fu7"/>
+                        <outlet property="gameModeLbl" destination="4Jx-qt-yDm" id="UUz-gL-NvG"/>
+                        <outlet property="matchDurationLbl" destination="LLk-3F-hMI" id="0fg-FB-j7D"/>
+                        <outlet property="radiantBtn" destination="Zsu-fi-lXb" id="Di8-CV-hy1"/>
+                        <outlet property="radiantScoreLbl" destination="6fT-h7-Dmd" id="cyd-Ob-hUa"/>
+                        <outlet property="winnerTeamImg" destination="Cn4-fQ-KCq" id="ktC-0U-eRX"/>
+                        <outlet property="winnerTeamLbl" destination="5aa-IX-yZ2" id="Xak-T1-bS9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXm-AG-NXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294.20289855072468" y="355.58035714285711"/>
+        </scene>
+    </scenes>
+</document>

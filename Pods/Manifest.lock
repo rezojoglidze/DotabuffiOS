@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (5.1.0)
+  - Kingfisher (5.14.0):
+    - Kingfisher/Core (= 5.14.0)
+  - Kingfisher/Core (5.14.0)
+  - Viperit (1.4.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher (~> 5.0)
+  - Viperit
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - Viperit
+
+SPEC CHECKSUMS:
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  Kingfisher: 7b64389a43139c903ec434788344c288217c792d
+  Viperit: cd08e50b10a1f58c6dad0833bbc111e4de398b31
+
+PODFILE CHECKSUM: cdc1b96fc60ad9fc3b16c34f012a8bc0120721ec
+
+COCOAPODS: 1.9.1
