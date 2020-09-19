@@ -35,8 +35,8 @@ extension MatchDetailsInteractor: MatchDetailsInteractorApi {
             case .success(let matchDetails):
                 self?.matchDetails = matchDetails
                 self?.presenter.didGetMatchDetails(matchDetails: matchDetails)
-            case .failure(let error):
-                print(error)
+            case .failure( _):
+                self?.presenter.didGetApiCallError()
             }
         }
     }

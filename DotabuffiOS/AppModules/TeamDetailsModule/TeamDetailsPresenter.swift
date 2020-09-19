@@ -21,6 +21,10 @@ final class TeamDetailsPresenter: Presenter {
 
 // MARK: - TeamDetailsPresenter API
 extension TeamDetailsPresenter: TeamDetailsPresenterApi {
+    func didGetApiCallError() {
+        router.showApiCallErrorAlert()
+    }
+    
     func didGetTeamDetails(teamDetails: [TeamDetailsItem]) {
         view.upateView(teamDetails: teamDetails)
     }

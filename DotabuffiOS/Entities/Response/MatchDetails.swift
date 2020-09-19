@@ -23,7 +23,7 @@ struct MatchDetails: Codable {
         case radiantWin = "radiant_win"
         case firstBloodTime = "first_blood_time"
         case radiantScore = "radiant_score"
-        case direScore = "dire_score"
+        case direScore = "dire1_score"
         case direTeam = "dire_team"
         case radiantTeam = "radiant_team"
         case duration

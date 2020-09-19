@@ -15,6 +15,12 @@ final class TeamDetailsRouter: Router {
 
 // MARK: - TeamDetailsRouter API
 extension TeamDetailsRouter: TeamDetailsRouterApi {
+    func showApiCallErrorAlert() {
+        let alert = UIAlertController(title: nil, message: "სამწუხაროდ, მოხდა შეფერხება. სცადეთ მოგვიანებით.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        viewController.present(alert, animated: true, completion: nil)
+    }
 }
 
 // MARK: - TeamDetails Viper Components

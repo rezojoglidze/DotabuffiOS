@@ -44,8 +44,8 @@ extension TeamDetailsInteractor: TeamDetailsInteractorApi {
             switch response {
             case .success(let teamDetails):
                 self?.configureTeamDetailItems(teamDetails: teamDetails)
-            case .failure(let error):
-                print(error)
+            case .failure( _):
+                self?.presenter.didGetApiCallError()
             }
         }
     }

@@ -15,6 +15,13 @@ final class MatchDetailsRouter: Router {
 
 // MARK: - MatchDetailsRouter API
 extension MatchDetailsRouter: MatchDetailsRouterApi {
+    func showApiCallErrorAlert() {
+        let alert = UIAlertController(title: nil, message: "სამწუხაროდ, მოხდა შეფერხება. სცადეთ მოგვიანებით.", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        viewController.present(alert, animated: true, completion: nil)
+    }
+    
     func showTeamDetails(teamId: Int) {
         let module = AppModules.teamDetails.build()
         module.router.show(from: viewController, embedInNavController: false, setupData: teamId)
