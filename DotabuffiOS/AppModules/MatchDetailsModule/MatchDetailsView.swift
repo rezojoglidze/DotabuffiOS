@@ -97,15 +97,15 @@ final class MatchDetailsView: HomeViewController {
             direBtn.isEnabled = true
             if let url = direTeam.logoUrl {
                 self.loadImageView(url: url, img: radiantImg)
-                self.radiantImg.isHidden = false
+                self.direImg.isHidden = false
             }
         }
         
-        if let radianTeam = matchDetails.direTeam {
+        if let radianTeam = matchDetails.radiantTeam {
             radiantBtn.isEnabled = true
             if let url = radianTeam.logoUrl {
                 loadImageView(url: url, img: direImg)
-                direImg.isHidden = false
+                radiantImg.isHidden = false
             }
         }
     }
