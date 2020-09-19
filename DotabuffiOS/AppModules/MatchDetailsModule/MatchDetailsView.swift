@@ -8,6 +8,7 @@
 
 import UIKit
 import Viperit
+import Kingfisher
 
 //MARK: MatchDetailsView Class
 final class MatchDetailsView: UserInterface {
@@ -17,6 +18,8 @@ final class MatchDetailsView: UserInterface {
     //MARK: IBOutlet
     @IBOutlet weak var winnerTeamImg: UIImageView!
     @IBOutlet weak var winnerTeamLbl: UILabel!
+    @IBOutlet weak var radiantImg: UIImageView!
+    @IBOutlet weak var direImg: UIImageView!
     @IBOutlet weak var radiantBtn: UIButton!
     @IBOutlet weak var direBtn: UIButton!
     @IBOutlet weak var radiantScoreLbl: UILabel!
@@ -30,18 +33,72 @@ final class MatchDetailsView: UserInterface {
         super.viewDidLoad()
         
         setupNavigaton()
+        
     }
     
     //MARK: View Setup
     func setupNavigaton() {
         navigationItem.title = "დეტალები"
     }
+
+    func secondsToTimeString(seconds : Int, label: UILabel) {
+        let hours = seconds / 3600
+        let minutes = (seconds % 3600) / 60
+        let seconds = (seconds % 3600) % 60
+        var timeString = ""
+        
+        [hours,minutes,seconds].forEach { item in
+            if item > 0 {
+                if item < 10 {
+                    timeString += "0\(item):"
+                } else {
+                    timeString += "\(item):"
+                }
+            }
+        }
+        timeString.removeLast()
+        label.text = timeString
+    }
+
+    func loadImageView(url: String, img: UIImageView) {
+        img.kf.setImage(with: URL(string: url))
+        if img == winnerTeamImg {
+            img.isHidden = false
+            img.shake(translationX: 20, y: 0)
+        }
+    }
+    
+    func configureView(matchDetails: MatchDetails) {
+        //Configure winner Team's Label
+        if matchDetails.radiantWin {
+            winnerTeamLbl.text = "RADIANT VICTORY"
+            winnerTeamLbl.textColor = #colorLiteral(red: 0.5725490196, green: 0.6470588235, blue: 0.1450980392, alpha: 1)
+            matchDetails.radiantTeam?.logoUrl != nil ? loadImageView(url: (matchDetails.radiantTeam?.logoUrl)!, img: winnerTeamImg) : nil
+        } else {
+            winnerTeamLbl.text = "DIRE VICTORY"
+            winnerTeamLbl.textColor = #colorLiteral(red: 0.7607843137, green: 0.2352941176, blue: 0.1647058824, alpha: 1)
+            matchDetails.direTeam?.logoUrl != nil ? loadImageView(url: (matchDetails.direTeam?.logoUrl)!, img: winnerTeamImg) : nil
+        }
+        //Configure Team's Buttons
+        direBtn.isEnabled = matchDetails.direTeam?.teamId != nil
+        radiantBtn.isEnabled =  matchDetails.radiantTeam?.teamId != nil
+        
+        matchDetails.radiantTeam?.logoUrl != nil ? loadImageView(url: (matchDetails.radiantTeam?.logoUrl)!, img: radiantImg) : nil
+        matchDetails.direTeam?.logoUrl != nil ? loadImageView(url: (matchDetails.direTeam?.logoUrl)!, img: direImg) : nil
+        //Configure ScoreView
+        radiantScoreLbl.text = String(matchDetails.radiantScore)
+        direScoreLbl.text = String(matchDetails.direScore)
+        secondsToTimeString(seconds: matchDetails.duration, label: matchDurationLbl)
+        //Configure first Blood Time and match mode
+        secondsToTimeString(seconds: matchDetails.firstBloodTime, label: firstBloodTimeLbl)
+    }
 }
 
 //MARK: - MatchDetailsView API
 extension MatchDetailsView: MatchDetailsViewApi {
     func updateView(matchDetails: MatchDetails) {
-        print(matchDetails)
+        self.stopLoading()
+        configureView(matchDetails: matchDetails)
     }
 }
 

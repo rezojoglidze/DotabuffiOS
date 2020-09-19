@@ -14,7 +14,7 @@ final class MatchDetailsPresenter: Presenter {
     
    override func setupView(data: Any) {
         if let matchId = data as? Int {
-//            view.startLoading()
+            view.startLoading()
             self.interactor.getMatchDetails(id: matchId)
         }
     }
