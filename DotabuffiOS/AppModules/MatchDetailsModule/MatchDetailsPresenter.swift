@@ -22,6 +22,11 @@ final class MatchDetailsPresenter: Presenter {
 
 // MARK: - MatchDetailsPresenter API
 extension MatchDetailsPresenter: MatchDetailsPresenterApi {
+    
+    func didGetTeamIdForDetails(teamId: Int) {
+        router.showTeamDetails(teamId: teamId)
+    }
+    
     func didGetMatchDetails(matchDetails: MatchDetails) {
         view.updateView(matchDetails: matchDetails)
     }

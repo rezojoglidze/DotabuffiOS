@@ -11,6 +11,7 @@ import Viperit
 
 // MARK: - MatchDetailsInteractor Class
 final class MatchDetailsInteractor: Interactor {
+    private var matchDetails: MatchDetails?
 }
 
 // MARK: - MatchDetailsInteractor API
@@ -20,6 +21,7 @@ extension MatchDetailsInteractor: MatchDetailsInteractorApi {
             
             switch result {
             case .success(let matchDetails):
+                self?.matchDetails = matchDetails
                 self?.presenter.didGetMatchDetails(matchDetails: matchDetails)
             case .failure(let error):
                 print(error)

@@ -42,4 +42,12 @@ class BaseAPI {
             completionHandler(responseHandler.getResult(from: response))
         }
     }
+    
+    func getTeamDetails(teamId: Int, completionHandler: @escaping (Result<TeamDetails,BasicResponseError>) -> Void) {
+        let urlStr = Constants.Api.baseUrl + Constants.Api.Routes.api + Constants.Api.Routes.teams + "/\(teamId)"
+        request(urlStr, method: .get, needsAuthorization: false).responseJSON { response in
+            let responseHandler = BasicResponseHandler<TeamDetails>()
+            completionHandler(responseHandler.getResult(from: response))
+        }
+    }
 }

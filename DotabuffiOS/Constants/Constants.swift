@@ -21,6 +21,7 @@ struct Constants {
         struct Routes {
             static let api = "/api"
             static let matches = "/matches"
+            static let teams = "/teams"
         }
     }
 }

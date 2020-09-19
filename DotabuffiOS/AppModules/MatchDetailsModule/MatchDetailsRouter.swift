@@ -15,6 +15,10 @@ final class MatchDetailsRouter: Router {
 
 // MARK: - MatchDetailsRouter API
 extension MatchDetailsRouter: MatchDetailsRouterApi {
+    func showTeamDetails(teamId: Int) {
+        let module = AppModules.teamDetails.build()
+        module.router.show(from: viewController, embedInNavController: false, setupData: teamId)
+    }
 }
 
 // MARK: - MatchDetails Viper Components

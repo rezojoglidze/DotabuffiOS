@@ -24,6 +24,16 @@
 		F229C6BB251500E800965CB0 /* BasicResponseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229C6B9251500E800965CB0 /* BasicResponseHandler.swift */; };
 		F229C6BC251500E800965CB0 /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229C6BA251500E800965CB0 /* BaseAPI.swift */; };
 		F229C6C1251500F900965CB0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F229C6BF251500F900965CB0 /* HomeViewController.swift */; };
+		F22B1E0F2516346300339DB7 /* TeamDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F22B1E082516346300339DB7 /* TeamDetails.storyboard */; };
+		F22B1E102516346300339DB7 /* TeamDetailsDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1E092516346300339DB7 /* TeamDetailsDisplayData.swift */; };
+		F22B1E112516346300339DB7 /* TeamDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1E0A2516346300339DB7 /* TeamDetailsPresenter.swift */; };
+		F22B1E122516346300339DB7 /* TeamDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1E0B2516346300339DB7 /* TeamDetailsRouter.swift */; };
+		F22B1E132516346300339DB7 /* TeamDetailsModuleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1E0C2516346300339DB7 /* TeamDetailsModuleApi.swift */; };
+		F22B1E142516346300339DB7 /* TeamDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1E0D2516346300339DB7 /* TeamDetailsInteractor.swift */; };
+		F22B1E152516346300339DB7 /* TeamDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1E0E2516346300339DB7 /* TeamDetailsView.swift */; };
+		F22B1E172516394E00339DB7 /* TeamDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1E162516394E00339DB7 /* TeamDetails.swift */; };
+		F22B1E1B25163E0700339DB7 /* TeamDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1E1925163E0700339DB7 /* TeamDetailsCell.swift */; };
+		F22B1E1C25163E0700339DB7 /* TeamDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22B1E1A25163E0700339DB7 /* TeamDetailsCell.xib */; };
 		F286254F251525AB00C45F03 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F286254E251525AB00C45F03 /* MatchDetails.swift */; };
 		F2BBFF012515025000A198E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2BBFEFA2515024F00A198E8 /* Main.storyboard */; };
 		F2BBFF022515025000A198E8 /* MainDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BBFEFB2515024F00A198E8 /* MainDisplayData.swift */; };
@@ -64,6 +74,16 @@
 		F229C6B9251500E800965CB0 /* BasicResponseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicResponseHandler.swift; sourceTree = "<group>"; };
 		F229C6BA251500E800965CB0 /* BaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		F229C6BF251500F900965CB0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F22B1E082516346300339DB7 /* TeamDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TeamDetails.storyboard; sourceTree = "<group>"; };
+		F22B1E092516346300339DB7 /* TeamDetailsDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsDisplayData.swift; sourceTree = "<group>"; };
+		F22B1E0A2516346300339DB7 /* TeamDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsPresenter.swift; sourceTree = "<group>"; };
+		F22B1E0B2516346300339DB7 /* TeamDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsRouter.swift; sourceTree = "<group>"; };
+		F22B1E0C2516346300339DB7 /* TeamDetailsModuleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsModuleApi.swift; sourceTree = "<group>"; };
+		F22B1E0D2516346300339DB7 /* TeamDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsInteractor.swift; sourceTree = "<group>"; };
+		F22B1E0E2516346300339DB7 /* TeamDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsView.swift; sourceTree = "<group>"; };
+		F22B1E162516394E00339DB7 /* TeamDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetails.swift; sourceTree = "<group>"; };
+		F22B1E1925163E0700339DB7 /* TeamDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsCell.swift; sourceTree = "<group>"; };
+		F22B1E1A25163E0700339DB7 /* TeamDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamDetailsCell.xib; sourceTree = "<group>"; };
 		F239A0B848FBC7EFB5935219 /* Pods_DotabuffiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotabuffiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F286254E251525AB00C45F03 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
 		F2BBFEFA2515024F00A198E8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -222,6 +242,7 @@
 			children = (
 				F229C6AF251500DC00965CB0 /* BasicResponseError.swift */,
 				F286254E251525AB00C45F03 /* MatchDetails.swift */,
+				F22B1E162516394E00339DB7 /* TeamDetails.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -250,6 +271,7 @@
 				F229C6BE251500F900965CB0 /* BaseControllers */,
 				F2BBFEF92515023A00A198E8 /* MainModule */,
 				F2BFEA9225151719009A4368 /* MatchDetailsModule */,
+				F22B1E072516344000339DB7 /* TeamDetailsModule */,
 			);
 			path = AppModules;
 			sourceTree = "<group>";
@@ -260,6 +282,30 @@
 				F229C6BF251500F900965CB0 /* HomeViewController.swift */,
 			);
 			path = BaseControllers;
+			sourceTree = "<group>";
+		};
+		F22B1E072516344000339DB7 /* TeamDetailsModule */ = {
+			isa = PBXGroup;
+			children = (
+				F22B1E1825163DED00339DB7 /* TeamDetailsCell */,
+				F22B1E082516346300339DB7 /* TeamDetails.storyboard */,
+				F22B1E092516346300339DB7 /* TeamDetailsDisplayData.swift */,
+				F22B1E0A2516346300339DB7 /* TeamDetailsPresenter.swift */,
+				F22B1E0B2516346300339DB7 /* TeamDetailsRouter.swift */,
+				F22B1E0C2516346300339DB7 /* TeamDetailsModuleApi.swift */,
+				F22B1E0D2516346300339DB7 /* TeamDetailsInteractor.swift */,
+				F22B1E0E2516346300339DB7 /* TeamDetailsView.swift */,
+			);
+			path = TeamDetailsModule;
+			sourceTree = "<group>";
+		};
+		F22B1E1825163DED00339DB7 /* TeamDetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				F22B1E1925163E0700339DB7 /* TeamDetailsCell.swift */,
+				F22B1E1A25163E0700339DB7 /* TeamDetailsCell.xib */,
+			);
+			path = TeamDetailsCell;
 			sourceTree = "<group>";
 		};
 		F2BBFEF92515023A00A198E8 /* MainModule */ = {
@@ -368,7 +414,9 @@
 				F229C69F2515009100965CB0 /* Loader.gif in Resources */,
 				F229C68E2515005400965CB0 /* Assets.xcassets in Resources */,
 				F2BFEA9A25151740009A4368 /* MatchDetails.storyboard in Resources */,
+				F22B1E0F2516346300339DB7 /* TeamDetails.storyboard in Resources */,
 				F229C6A12515009100965CB0 /* HelveticaNeueLTGEO-75Bold.otf in Resources */,
+				F22B1E1C25163E0700339DB7 /* TeamDetailsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,22 +475,30 @@
 				F2BFEA9D25151740009A4368 /* MatchDetailsRouter.swift in Sources */,
 				F229C6B6251500E200965CB0 /* Extensions.swift in Sources */,
 				F229C6B7251500E200965CB0 /* UIExtensions.swift in Sources */,
+				F22B1E152516346300339DB7 /* TeamDetailsView.swift in Sources */,
 				F2BFEAA025151740009A4368 /* MatchDetailsView.swift in Sources */,
 				F2BBFF052515025000A198E8 /* MainModuleApi.swift in Sources */,
+				F22B1E102516346300339DB7 /* TeamDetailsDisplayData.swift in Sources */,
+				F22B1E122516346300339DB7 /* TeamDetailsRouter.swift in Sources */,
 				F286254F251525AB00C45F03 /* MatchDetails.swift in Sources */,
 				F2BFEA9C25151740009A4368 /* MatchDetailsPresenter.swift in Sources */,
 				F229C6A7251500C200965CB0 /* AppModule.swift in Sources */,
 				F2BFEA9B25151740009A4368 /* MatchDetailsDisplayData.swift in Sources */,
+				F22B1E132516346300339DB7 /* TeamDetailsModuleApi.swift in Sources */,
 				F229C6BB251500E800965CB0 /* BasicResponseHandler.swift in Sources */,
 				F2BBFF042515025000A198E8 /* MainRouter.swift in Sources */,
 				F2BBFF032515025000A198E8 /* MainPresenter.swift in Sources */,
 				F2BFEA9F25151740009A4368 /* MatchDetailsInteractor.swift in Sources */,
 				F229C6852515005200965CB0 /* AppDelegate.swift in Sources */,
 				F229C6BC251500E800965CB0 /* BaseAPI.swift in Sources */,
+				F22B1E142516346300339DB7 /* TeamDetailsInteractor.swift in Sources */,
+				F22B1E172516394E00339DB7 /* TeamDetails.swift in Sources */,
 				F229C6B2251500DC00965CB0 /* BasicResponseError.swift in Sources */,
+				F22B1E112516346300339DB7 /* TeamDetailsPresenter.swift in Sources */,
 				F229C6C1251500F900965CB0 /* HomeViewController.swift in Sources */,
 				F229C6872515005200965CB0 /* SceneDelegate.swift in Sources */,
 				F2BFEA9E25151740009A4368 /* MatchDetailsModuleApi.swift in Sources */,
+				F22B1E1B25163E0700339DB7 /* TeamDetailsCell.swift in Sources */,
 				F2BBFF062515025000A198E8 /* MainInteractor.swift in Sources */,
 				F2BBFF022515025000A198E8 /* MainDisplayData.swift in Sources */,
 			);

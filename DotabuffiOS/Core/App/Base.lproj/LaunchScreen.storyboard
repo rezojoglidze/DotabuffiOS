@@ -21,13 +21,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dotabuff" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6KV-bt-7XG">
-                                <rect key="frame" x="161" y="434.5" width="92" height="27"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="22"/>
+                                <rect key="frame" x="145" y="430" width="124.5" height="36.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6KV-bt-7XG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8VF-AF-yaL"/>
                             <constraint firstItem="6KV-bt-7XG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="INE-jp-SEa"/>

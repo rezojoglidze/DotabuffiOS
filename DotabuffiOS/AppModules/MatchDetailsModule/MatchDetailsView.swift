@@ -14,6 +14,7 @@ import Kingfisher
 final class MatchDetailsView: UserInterface {
     
     //MARK: Class variable
+    private var matchDetails: MatchDetails!
     
     //MARK: IBOutlet
     @IBOutlet weak var winnerTeamImg: UIImageView!
@@ -33,14 +34,36 @@ final class MatchDetailsView: UserInterface {
         super.viewDidLoad()
         
         setupNavigaton()
-        
+        addTargetToBtns()
     }
+    
+    func addTargetToBtns() {
+        radiantBtn.addTarget(self, action: #selector(handleRadiantTeam), for: .touchUpInside)
+        direBtn.addTarget(self, action: #selector(handleDireTeam), for: .touchUpInside)
+        
+        let radianTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleRadiantTeam))
+        radiantImg.addGestureRecognizer(radianTapGestureRecognizer)
+        
+        let dareTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleDireTeam))
+        direImg.addGestureRecognizer(dareTapGestureRecognizer)
+    }
+    
+    @objc func handleRadiantTeam(){
+        presenter.didGetTeamIdForDetails(teamId: matchDetails.radiantTeam!.teamId)
+    }
+    
+    @objc func handleDireTeam(){
+        presenter.didGetTeamIdForDetails(teamId: matchDetails.direTeam!.teamId)
+    }
+    
     
     //MARK: View Setup
     func setupNavigaton() {
-        navigationItem.title = "დეტალები"
+        navigationItem.title = "მატჩის დეტალები"
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.4392156863, green: 0.3882352941, blue: 0.9176470588, alpha: 1)
     }
-
+    
     func secondsToTimeString(seconds : Int, label: UILabel) {
         let hours = seconds / 3600
         let minutes = (seconds % 3600) / 60
@@ -59,7 +82,7 @@ final class MatchDetailsView: UserInterface {
         timeString.removeLast()
         label.text = timeString
     }
-
+    
     func loadImageView(url: String, img: UIImageView) {
         img.kf.setImage(with: URL(string: url))
         if img == winnerTeamImg {
@@ -83,8 +106,15 @@ final class MatchDetailsView: UserInterface {
         direBtn.isEnabled = matchDetails.direTeam?.teamId != nil
         radiantBtn.isEnabled =  matchDetails.radiantTeam?.teamId != nil
         
-        matchDetails.radiantTeam?.logoUrl != nil ? loadImageView(url: (matchDetails.radiantTeam?.logoUrl)!, img: radiantImg) : nil
-        matchDetails.direTeam?.logoUrl != nil ? loadImageView(url: (matchDetails.direTeam?.logoUrl)!, img: direImg) : nil
+        if matchDetails.radiantTeam?.logoUrl != nil {
+            self.loadImageView(url: (matchDetails.radiantTeam?.logoUrl)!, img: radiantImg)
+            self.radiantImg.isHidden = false
+        }
+        
+        if matchDetails.direTeam?.logoUrl != nil {
+            loadImageView(url: (matchDetails.direTeam?.logoUrl)!, img: direImg)
+            direImg.isHidden = false
+        }
         //Configure ScoreView
         radiantScoreLbl.text = String(matchDetails.radiantScore)
         direScoreLbl.text = String(matchDetails.direScore)
@@ -98,6 +128,7 @@ final class MatchDetailsView: UserInterface {
 extension MatchDetailsView: MatchDetailsViewApi {
     func updateView(matchDetails: MatchDetails) {
         self.stopLoading()
+        self.matchDetails = matchDetails
         configureView(matchDetails: matchDetails)
     }
 }

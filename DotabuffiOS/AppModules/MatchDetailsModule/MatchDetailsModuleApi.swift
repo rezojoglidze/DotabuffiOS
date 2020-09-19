@@ -10,6 +10,7 @@ import Viperit
 
 //MARK: - MatchDetailsRouter API
 protocol MatchDetailsRouterApi: RouterProtocol {
+    func showTeamDetails(teamId: Int)
 }
 
 //MARK: - MatchDetailsView API
@@ -20,6 +21,9 @@ protocol MatchDetailsViewApi: UserInterfaceProtocol {
 
 //MARK: - MatchDetailsPresenter API
 protocol MatchDetailsPresenterApi: PresenterProtocol {
+    
+    //View -> Presenter
+    func didGetTeamIdForDetails(teamId: Int)
     
     //Interactor -> Presenter
     func didGetMatchDetails(matchDetails: MatchDetails)

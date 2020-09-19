@@ -11,12 +11,12 @@ import Viperit
 
 enum AppModules: String, ViperitModule {
     case
-        main,matchDetails
+        main,matchDetails,teamDetails
     
     var viewType: ViperitViewType {
         switch self {
         case
-        .main,.matchDetails : return .storyboard
+        .main,.matchDetails,.teamDetails : return .storyboard
         }
     }
 }
