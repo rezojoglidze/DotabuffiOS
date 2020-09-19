@@ -84,11 +84,15 @@ final class MatchDetailsView: HomeViewController {
         if matchDetails.radiantWin {
             winnerTeamLbl.text = "RADIANT VICTORY"
             winnerTeamLbl.textColor = #colorLiteral(red: 0.5725490196, green: 0.6470588235, blue: 0.1450980392, alpha: 1)
-            matchDetails.radiantTeam?.logoUrl != nil ? loadImageView(url: (matchDetails.radiantTeam?.logoUrl)!, img: winnerTeamImg) : nil
+            if let url =  matchDetails.radiantTeam?.logoUrl {
+                loadImageView(url: url, img: winnerTeamImg)
+            }
         } else {
             winnerTeamLbl.text = "DIRE VICTORY"
             winnerTeamLbl.textColor = #colorLiteral(red: 0.7607843137, green: 0.2352941176, blue: 0.1647058824, alpha: 1)
-            matchDetails.direTeam?.logoUrl != nil ? loadImageView(url: (matchDetails.direTeam?.logoUrl)!, img: winnerTeamImg) : nil
+            if let url =  matchDetails.direTeam?.logoUrl {
+                loadImageView(url: url, img: winnerTeamImg)
+            }
         }
     }
     
@@ -96,7 +100,7 @@ final class MatchDetailsView: HomeViewController {
         if let direTeam = matchDetails.direTeam {
             direBtn.isEnabled = true
             if let url = direTeam.logoUrl {
-                self.loadImageView(url: url, img: radiantImg)
+                self.loadImageView(url: url, img: direImg)
                 self.direImg.isHidden = false
             }
         }
@@ -104,7 +108,7 @@ final class MatchDetailsView: HomeViewController {
         if let radianTeam = matchDetails.radiantTeam {
             radiantBtn.isEnabled = true
             if let url = radianTeam.logoUrl {
-                loadImageView(url: url, img: direImg)
+                loadImageView(url: url, img: radiantImg)
                 radiantImg.isHidden = false
             }
         }
