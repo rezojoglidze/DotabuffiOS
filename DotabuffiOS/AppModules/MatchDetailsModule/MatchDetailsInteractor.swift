@@ -16,8 +16,20 @@ final class MatchDetailsInteractor: Interactor {
 
 // MARK: - MatchDetailsInteractor API
 extension MatchDetailsInteractor: MatchDetailsInteractorApi {
-    func getMatchDetails(id: Int) {
-        BaseAPI.shared.getMatchDetails(id: id) { [weak self] (result) in
+    func getRadianTeamIdForDetails() {
+        if let radianTeam = matchDetails?.radiantTeam {
+            presenter.didGetTeamIdForDetails(teamId: radianTeam.teamId)
+        }
+    }
+    
+    func getDireTeamIdForDetails() {
+        if let direTeam = matchDetails?.direTeam {
+            presenter.didGetTeamIdForDetails(teamId: direTeam.teamId)
+        }
+    }
+    
+    func getMatchDetails(matchId: Int) {
+        BaseAPI.shared.getMatchDetails(matchId: matchId) { [weak self] (result) in
             
             switch result {
             case .success(let matchDetails):

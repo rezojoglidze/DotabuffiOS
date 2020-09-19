@@ -106,7 +106,7 @@
                                                 <color key="textColor" red="0.5568627451" green="0.55294117649999996" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jx-qt-yDm">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jx-qt-yDm">
                                                 <rect key="frame" x="131" y="0.0" width="17.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -123,7 +123,7 @@
                                                 <color key="textColor" red="0.5568627451" green="0.55294117649999996" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3m-fd-Pbw">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z3m-fd-Pbw">
                                                 <rect key="frame" x="131" y="0.0" width="17.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeueLTGEO-75Bold" family="Helvetica Neue LT GEO" pointSize="14"/>
                                                 <nil key="textColor"/>
@@ -156,6 +156,7 @@
                             <constraint firstItem="Zsu-fi-lXb" firstAttribute="top" secondItem="aQf-eX-ifL" secondAttribute="bottom" constant="60" id="WRo-uX-Suc"/>
                             <constraint firstItem="q9r-TT-Pg3" firstAttribute="centerY" secondItem="Zsu-fi-lXb" secondAttribute="centerY" id="YOl-CP-zS0"/>
                             <constraint firstItem="L9z-1V-wVb" firstAttribute="centerY" secondItem="Zsu-fi-lXb" secondAttribute="centerY" id="fte-HI-i0s"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZpZ-qs-N74" secondAttribute="trailing" constant="20" id="kN5-Ti-bJf"/>
                             <constraint firstItem="Zsu-fi-lXb" firstAttribute="centerX" secondItem="6fT-h7-Dmd" secondAttribute="centerX" id="nE1-wE-pWu"/>
                             <constraint firstItem="ZpZ-qs-N74" firstAttribute="top" secondItem="mZj-3s-MNR" secondAttribute="bottom" constant="50" id="tIy-eB-Vgh"/>
                         </constraints>

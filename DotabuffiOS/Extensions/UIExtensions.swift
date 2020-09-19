@@ -23,10 +23,6 @@ extension UIImageView {
 extension UIViewController {
     @objc
     func startLoading() {
-        startLoadingAnimation()
-    }
-    
-    private func startLoadingAnimation() {
         if view.viewWithTag(1000) == nil {
             let animationBackgroundView = UIView()
             animationBackgroundView.backgroundColor = view.backgroundColor
@@ -46,14 +42,14 @@ extension UIViewController {
             ])
         }
     }
-    
-    @objc
-    func stopLoading() {
-        if let animationBackgroundView = view.viewWithTag(1000) {
-            animationBackgroundView.removeFromSuperview()
+        
+        @objc
+        func stopLoading() {
+            if let animationBackgroundView = view.viewWithTag(1000) {
+                animationBackgroundView.removeFromSuperview()
+            }
         }
     }
-}
 
 
 //MARK: Gif loader

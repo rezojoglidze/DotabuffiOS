@@ -11,7 +11,7 @@ import UIKit
 import Viperit
 
 //MARK: TeamDetailsView Class
-final class TeamDetailsView: UserInterface {
+final class TeamDetailsView: HomeViewController {
     
     //MARK: Class variable
     private var teamDetails: [TeamDetailsItem] = []

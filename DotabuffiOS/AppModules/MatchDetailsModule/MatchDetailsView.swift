@@ -11,7 +11,7 @@ import Viperit
 import Kingfisher
 
 //MARK: MatchDetailsView Class
-final class MatchDetailsView: UserInterface {
+final class MatchDetailsView: HomeViewController {
     
     //MARK: Class variable
     private var matchDetails: MatchDetails!
@@ -80,8 +80,7 @@ final class MatchDetailsView: UserInterface {
         }
     }
     
-    func configureView(matchDetails: MatchDetails) {
-        //Configure winner Team's Label
+    func configureWinnerTeamLbl(with matchDetails: MatchDetails) {
         if matchDetails.radiantWin {
             winnerTeamLbl.text = "RADIANT VICTORY"
             winnerTeamLbl.textColor = #colorLiteral(red: 0.5725490196, green: 0.6470588235, blue: 0.1450980392, alpha: 1)
@@ -91,25 +90,32 @@ final class MatchDetailsView: UserInterface {
             winnerTeamLbl.textColor = #colorLiteral(red: 0.7607843137, green: 0.2352941176, blue: 0.1647058824, alpha: 1)
             matchDetails.direTeam?.logoUrl != nil ? loadImageView(url: (matchDetails.direTeam?.logoUrl)!, img: winnerTeamImg) : nil
         }
-        //Configure Team's Buttons
-        direBtn.isEnabled = matchDetails.direTeam?.teamId != nil
-        radiantBtn.isEnabled =  matchDetails.radiantTeam?.teamId != nil
-        
-        if matchDetails.radiantTeam?.logoUrl != nil {
-            self.loadImageView(url: (matchDetails.radiantTeam?.logoUrl)!, img: radiantImg)
-            self.radiantImg.isHidden = false
+    }
+    
+    func configureTeamsBtns(with matchDetails: MatchDetails) {
+        if let direTeam = matchDetails.direTeam {
+            direBtn.isEnabled = true
+            if let url = direTeam.logoUrl {
+                self.loadImageView(url: url, img: radiantImg)
+                self.radiantImg.isHidden = false
+            }
         }
         
-        if matchDetails.direTeam?.logoUrl != nil {
-            loadImageView(url: (matchDetails.direTeam?.logoUrl)!, img: direImg)
-            direImg.isHidden = false
+        if let radianTeam = matchDetails.direTeam {
+            radiantBtn.isEnabled = true
+            if let url = radianTeam.logoUrl {
+                loadImageView(url: url, img: direImg)
+                direImg.isHidden = false
+            }
         }
-        //Configure ScoreView
+    }
+    
+    func configureScoreView(with matchDetails: MatchDetails) {
         radiantScoreLbl.text = String(matchDetails.radiantScore)
         direScoreLbl.text = String(matchDetails.direScore)
         matchDurationLbl.text = secondsToTimeString(seconds: matchDetails.duration)
-        //Configure first Blood Time and match mode
         firstBloodTimeLbl.text = secondsToTimeString(seconds: matchDetails.firstBloodTime)
+        gameModeLbl.text = matchDetails.gameMode.getGameModeName()
     }
 }
 
@@ -118,7 +124,9 @@ extension MatchDetailsView: MatchDetailsViewApi {
     func updateView(matchDetails: MatchDetails) {
         self.stopLoading()
         self.matchDetails = matchDetails
-        configureView(matchDetails: matchDetails)
+        configureWinnerTeamLbl(with: matchDetails)
+        configureTeamsBtns(with: matchDetails)
+        configureScoreView(with: matchDetails)
     }
 }
 

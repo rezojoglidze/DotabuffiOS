@@ -15,20 +15,28 @@ final class MatchDetailsPresenter: Presenter {
    override func setupView(data: Any) {
         if let matchId = data as? Int {
             view.startLoading()
-            self.interactor.getMatchDetails(id: matchId)
+            self.interactor.getMatchDetails(matchId: matchId)
         }
     }
 }
 
 // MARK: - MatchDetailsPresenter API
 extension MatchDetailsPresenter: MatchDetailsPresenterApi {
+    func didGetMatchDetails(matchDetails: MatchDetails) {
+        view.updateView(matchDetails: matchDetails)
+    }
+    
+    func didTapRadian() {
+        interactor.getRadianTeamIdForDetails()
+    }
+    
+    func didTapDire() {
+        interactor.getDireTeamIdForDetails()
+    }
+    
     
     func didGetTeamIdForDetails(teamId: Int) {
         router.showTeamDetails(teamId: teamId)
-    }
-    
-    func didGetMatchDetails(matchDetails: MatchDetails) {
-        view.updateView(matchDetails: matchDetails)
     }
 }
 

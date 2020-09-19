@@ -35,9 +35,9 @@ class BaseAPI {
     }
     
     
-    func getMatchDetails(id: Int, completionHandler: @escaping (Result<MatchDetails,BasicResponseError>) -> Void) {
-        let urlStr = Constants.Api.baseUrl + Constants.Api.Routes.api + Constants.Api.Routes.matches + "/\(id)"
-        request(urlStr, method: .get, needsAuthorization: false).responseJSON { response in
+    func getMatchDetails(matchId: Int, completionHandler: @escaping (Result<MatchDetails,BasicResponseError>) -> Void) {
+        let urlStr = Constants.Api.baseUrl + Constants.Api.Routes.api + Constants.Api.Routes.matches + "/\(matchId)"
+        request(urlStr).responseJSON { response in
             let responseHandler = BasicResponseHandler<MatchDetails>()
             completionHandler(responseHandler.getResult(from: response))
         }
@@ -45,7 +45,7 @@ class BaseAPI {
     
     func getTeamDetails(teamId: Int, completionHandler: @escaping (Result<TeamDetails,BasicResponseError>) -> Void) {
         let urlStr = Constants.Api.baseUrl + Constants.Api.Routes.api + Constants.Api.Routes.teams + "/\(teamId)"
-        request(urlStr, method: .get, needsAuthorization: false).responseJSON { response in
+        request(urlStr).responseJSON { response in
             let responseHandler = BasicResponseHandler<TeamDetails>()
             completionHandler(responseHandler.getResult(from: response))
         }

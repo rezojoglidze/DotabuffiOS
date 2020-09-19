@@ -24,6 +24,8 @@ protocol MatchDetailsPresenterApi: PresenterProtocol {
     
     //View -> Presenter
     func didGetTeamIdForDetails(teamId: Int)
+    func didTapRadian()
+    func didTapDire()
     
     //Interactor -> Presenter
     func didGetMatchDetails(matchDetails: MatchDetails)
@@ -31,5 +33,7 @@ protocol MatchDetailsPresenterApi: PresenterProtocol {
 
 //MARK: - MatchDetailsInteractor API
 protocol MatchDetailsInteractorApi: InteractorProtocol {
-    func getMatchDetails(id: Int)
+    func getMatchDetails(matchId: Int)
+    func getRadianTeamIdForDetails()
+    func getDireTeamIdForDetails()
 }

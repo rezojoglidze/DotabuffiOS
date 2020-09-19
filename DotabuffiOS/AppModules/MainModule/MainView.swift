@@ -13,7 +13,7 @@ import Viperit
 final class MainView: HomeViewController {
     
     //MARK: Class variable
-    private var matchesIds = [ 5620275364, 271145478,5619999390,5620013443,5619991492,5619992102,5620007735,5619995586 ]
+    private var matchesIds = [ 5620275364, 271145478, 5619999390, 5620013443, 5619991492, 5619992102 ]
     
     //MARK: IBOutlet
     @IBOutlet weak var tableView: UITableView!
