@@ -64,23 +64,12 @@ final class MatchDetailsView: UserInterface {
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.4392156863, green: 0.3882352941, blue: 0.9176470588, alpha: 1)
     }
     
-    func secondsToTimeString(seconds : Int, label: UILabel) {
-        let hours = seconds / 3600
-        let minutes = (seconds % 3600) / 60
-        let seconds = (seconds % 3600) % 60
-        var timeString = ""
-        
-        [hours,minutes,seconds].forEach { item in
-            if item > 0 {
-                if item < 10 {
-                    timeString += "0\(item):"
-                } else {
-                    timeString += "\(item):"
-                }
-            }
-        }
-        timeString.removeLast()
-        label.text = timeString
+    func secondsToTimeString(seconds : Int) -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(seconds))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "mm:ss"
+        dateFormatter.timeZone = .current
+        return dateFormatter.string(from: date)
     }
     
     func loadImageView(url: String, img: UIImageView) {
@@ -118,9 +107,9 @@ final class MatchDetailsView: UserInterface {
         //Configure ScoreView
         radiantScoreLbl.text = String(matchDetails.radiantScore)
         direScoreLbl.text = String(matchDetails.direScore)
-        secondsToTimeString(seconds: matchDetails.duration, label: matchDurationLbl)
+        matchDurationLbl.text = secondsToTimeString(seconds: matchDetails.duration)
         //Configure first Blood Time and match mode
-        secondsToTimeString(seconds: matchDetails.firstBloodTime, label: firstBloodTimeLbl)
+        firstBloodTimeLbl.text = secondsToTimeString(seconds: matchDetails.firstBloodTime)
     }
 }
 
