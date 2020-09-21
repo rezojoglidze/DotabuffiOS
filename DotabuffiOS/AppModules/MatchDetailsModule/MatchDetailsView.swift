@@ -119,18 +119,17 @@ final class MatchDetailsView: HomeViewController {
         direScoreLbl.text = String(matchDetails.direScore)
         matchDurationLbl.text = secondsToTimeString(seconds: matchDetails.duration)
         firstBloodTimeLbl.text = secondsToTimeString(seconds: matchDetails.firstBloodTime)
-        if let gameMode = getGameMode(gameModeId: matchDetails.gameMode) {
-            gameModeLbl.text = gameMode
+        if let name = getGameModeName(id: matchDetails.gameMode) {
+            gameModeLbl.text = name
         }
     }
     
-    func getGameMode(gameModeId: Int) -> String? {
+    func getGameModeName(id: Int) -> String? {
         if let url = Bundle.main.url(forResource: "GameModes", withExtension: "json") {
             do {
                 let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let gameModes = try decoder.decode([Int: GameMode].self, from: data)
-                return gameModes[gameModeId]?.name
+                let gameModes = try JSONDecoder().decode([Int: GameMode].self, from: data)
+                return gameModes[id]?.name
             } catch {
                 print("error:\(error)")
             }
