@@ -12,7 +12,7 @@ import Kingfisher
 
 //MARK: MatchDetailsView Class
 final class MatchDetailsView: HomeViewController {
-    
+
     //MARK: Class variable
     private var matchDetails: MatchDetails!
     
@@ -119,7 +119,23 @@ final class MatchDetailsView: HomeViewController {
         direScoreLbl.text = String(matchDetails.direScore)
         matchDurationLbl.text = secondsToTimeString(seconds: matchDetails.duration)
         firstBloodTimeLbl.text = secondsToTimeString(seconds: matchDetails.firstBloodTime)
-        gameModeLbl.text = matchDetails.gameMode.getGameModeName()
+        if let gameMode = getGameMode(gameModeId: matchDetails.gameMode) {
+            gameModeLbl.text = gameMode
+        }
+    }
+    
+    func getGameMode(gameModeId: Int) -> String? {
+        if let url = Bundle.main.url(forResource: "GameModes", withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let decoder = JSONDecoder()
+                let gameModes = try decoder.decode([Int: GameMode].self, from: data)
+                return gameModes[gameModeId]?.name
+            } catch {
+                print("error:\(error)")
+            }
+        }
+        return nil
     }
 }
 

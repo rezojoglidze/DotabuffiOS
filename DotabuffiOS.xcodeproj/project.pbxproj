@@ -35,6 +35,8 @@
 		F22B1E1B25163E0700339DB7 /* TeamDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22B1E1925163E0700339DB7 /* TeamDetailsCell.swift */; };
 		F22B1E1C25163E0700339DB7 /* TeamDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F22B1E1A25163E0700339DB7 /* TeamDetailsCell.xib */; };
 		F286254F251525AB00C45F03 /* MatchDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = F286254E251525AB00C45F03 /* MatchDetails.swift */; };
+		F2A6575E251895230002105B /* GameMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A6575D251895230002105B /* GameMode.swift */; };
+		F2A657602518959B0002105B /* GameModes.json in Resources */ = {isa = PBXBuildFile; fileRef = F2A6575F2518959B0002105B /* GameModes.json */; };
 		F2BBFF012515025000A198E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2BBFEFA2515024F00A198E8 /* Main.storyboard */; };
 		F2BBFF022515025000A198E8 /* MainDisplayData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BBFEFB2515024F00A198E8 /* MainDisplayData.swift */; };
 		F2BBFF032515025000A198E8 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BBFEFC2515024F00A198E8 /* MainPresenter.swift */; };
@@ -86,6 +88,8 @@
 		F22B1E1A25163E0700339DB7 /* TeamDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamDetailsCell.xib; sourceTree = "<group>"; };
 		F239A0B848FBC7EFB5935219 /* Pods_DotabuffiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DotabuffiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F286254E251525AB00C45F03 /* MatchDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetails.swift; sourceTree = "<group>"; };
+		F2A6575D251895230002105B /* GameMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMode.swift; sourceTree = "<group>"; };
+		F2A6575F2518959B0002105B /* GameModes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GameModes.json; sourceTree = "<group>"; };
 		F2BBFEFA2515024F00A198E8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F2BBFEFB2515024F00A198E8 /* MainDisplayData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDisplayData.swift; sourceTree = "<group>"; };
 		F2BBFEFC2515024F00A198E8 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 		F229C6AB251500DC00965CB0 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				F2A6575F2518959B0002105B /* GameModes.json */,
 				F229C6AC251500DC00965CB0 /* Response */,
 			);
 			path = Entities;
@@ -243,6 +248,7 @@
 				F229C6AF251500DC00965CB0 /* BasicResponseError.swift */,
 				F286254E251525AB00C45F03 /* MatchDetails.swift */,
 				F22B1E162516394E00339DB7 /* TeamDetails.swift */,
+				F2A6575D251895230002105B /* GameMode.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -417,6 +423,7 @@
 				F22B1E0F2516346300339DB7 /* TeamDetails.storyboard in Resources */,
 				F229C6A12515009100965CB0 /* HelveticaNeueLTGEO-75Bold.otf in Resources */,
 				F22B1E1C25163E0700339DB7 /* TeamDetailsCell.xib in Resources */,
+				F2A657602518959B0002105B /* GameModes.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +505,7 @@
 				F229C6C1251500F900965CB0 /* HomeViewController.swift in Sources */,
 				F229C6872515005200965CB0 /* SceneDelegate.swift in Sources */,
 				F2BFEA9E25151740009A4368 /* MatchDetailsModuleApi.swift in Sources */,
+				F2A6575E251895230002105B /* GameMode.swift in Sources */,
 				F22B1E1B25163E0700339DB7 /* TeamDetailsCell.swift in Sources */,
 				F2BBFF062515025000A198E8 /* MainInteractor.swift in Sources */,
 				F2BBFF022515025000A198E8 /* MainDisplayData.swift in Sources */,
